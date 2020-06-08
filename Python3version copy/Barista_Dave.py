@@ -24,6 +24,10 @@ class Barista_Dave(ACTR):
     DM.add('isa:coffee')
 
 # PRODUCTIONS
-    def START(focus='start'):
-        print ('do shit')
+#    def START(focus='start'):
+#        print ('do shit')
+#        focus.set('stop')
 
+    def START2(cup='state:empty'):
+        print ('do cup')
+        self.parent.cup.state='full'
