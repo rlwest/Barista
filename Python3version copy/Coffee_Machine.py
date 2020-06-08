@@ -7,7 +7,7 @@ from MotorModule import *
 ##### The Agent #####
 #####################
 
-class Barista_Dave(ACTR):
+class Coffee_Machine(ACTR):
 
 # BUFFERS
     focus=Buffer()
@@ -25,8 +25,7 @@ class Barista_Dave(ACTR):
 
 # PRODUCTIONS
 
-    def START(focus='start',
-               cup='state:empty'):
-        print ('fill cup')
-        motor.action('coffee_machine', 'state', 'on')
-        focus.set('wait')
+
+    def On(coffee_machine='state:on',
+           cup='state:empty'):
+        motor.action('cup', 'state', 'full')
