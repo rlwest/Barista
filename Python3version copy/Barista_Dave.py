@@ -1,7 +1,7 @@
 import sys
 import ccm
-from MotorModule import *
 from ccm.lib.actr import *
+from MotorModule import *
 
 #####################
 ##### The Agent #####
@@ -21,7 +21,7 @@ class Barista_Dave(ACTR):
 
 # INITIAL SETTINGS
     focus.set('start')
-    DM.add('isa:coffee')
+    DM.add('isa:order order:coffee')
 
 # PRODUCTIONS
 #    def START(focus='start'):
@@ -29,5 +29,6 @@ class Barista_Dave(ACTR):
 #        focus.set('stop')
 
     def START2(cup='state:empty'):
-        print ('do cup')
-        self.parent.cup.state='full'
+        print ('fill cup')
+        #self.parent.cup.state='full'
+        motor.action('cup', 'state', 'full')
