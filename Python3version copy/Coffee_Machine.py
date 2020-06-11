@@ -7,6 +7,11 @@ from MotorModule import *
 ##### The Agent #####
 #####################
 
+class Coffee_Machine_Objects (ccm.Model):
+
+### objects in the environment
+    coffee_machine = ccm.Model(isa='coffee_machine', state='off')
+
 class Coffee_Machine(ACTR):
 
 # BUFFERS

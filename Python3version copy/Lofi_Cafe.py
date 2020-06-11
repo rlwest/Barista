@@ -11,6 +11,5 @@ class Objects (ccm.Model):
 
 ### objects in the environment
     cup = ccm.Model(isa='cup', state='empty')
-    coffee_machine = ccm.Model(isa='coffee_machine', state='off')
 
 
