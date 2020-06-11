@@ -12,23 +12,26 @@ from ccm.lib.actr import *
 from Barista_Dave import Barista_Dave
 from Coffee_Machine import Coffee_Machine
 
-from Lofi_Cafe import Objects
+# get objects
+from Objects import Objects
 from Coffee_Machine import Coffee_Machine_Objects
-C = type('C', (Objects,Coffee_Machine_Objects), dict(c='c'))
+
+# assemble objects into environment 
+Lofi_Cafe = type('Lofi_Cafe', (Objects,Coffee_Machine_Objects), dict(lofi='lofi'))
 
 ######## run model #########
 
-log = ccm.log()
-dave = Barista_Dave()          # name the agent
+#log = ccm.log()
+dave = Barista_Dave()
 coffee_machine = Coffee_Machine()
-#cafe = Objects()                # name the environment
-cafe = C()                # name the environment
+lofi_cafe = Lofi_Cafe()
 
 
-cafe.agent = dave              # put the agent in the environment
-cafe.agent = coffee_machine 
+lofi_cafe.agent = dave
+lofi_cafe.agent = coffee_machine 
 
 
-ccm.log_everything(cafe)       # print out what happens in the environment
-cafe.run()                # run the environment
-ccm.finished()           # stop the environment
+ccm.log_everything(lofi_cafe)
+lofi_cafe.run()
+ccm.finished()
+
