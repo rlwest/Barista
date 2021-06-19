@@ -1,2 +1,4 @@
 # Barista
-Crowd sourced barista model
+
+Project to model a coffee shop called the Lofi Cafe
+
