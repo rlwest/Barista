@@ -1,5 +1,5 @@
 # Barista
-Project to model a coffee shop called the Lofi Cafe
+Group project to model a coffee shop called the Lofi Cafe
 ## Folders
 * Markdown folder
   * This folder contains the Barista Expertise SGOMS model 
@@ -11,6 +11,7 @@ Project to model a coffee shop called the Lofi Cafe
 * Stepper folder
    * This was an idea for a viewer that could navigate the Markdown Pseudo Code
       * as if one were a barista in the Lofi Cafe
+* Interuptions should probably not be a folder
   
 
 
